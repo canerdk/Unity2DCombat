@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 6155450789433002578}
   - component: {fileID: 3716827411637091718}
   - component: {fileID: 1036342632885183845}
+  - component: {fileID: 928486338139830617}
   m_Layer: 0
   m_Name: Slime
-  m_TagString: Untagged
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,8 +33,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261079803408168236}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1733153, y: -2.9298487, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6002275, y: -2.0191517, z: 0.06568293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -166,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8bbb80fb3628d43b207b50baf3c3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
 --- !u!114 &1165168045359832494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d36be93a7859f04f9c90b15cd0c8eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1
 --- !u!114 &6155450789433002578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   deathVFXPrefab: {fileID: 3884831810284188939, guid: 5e4dc578e748d904ba72ecc966a6dc0a, type: 3}
+  knockBackThrust: 15
 --- !u!114 &3716827411637091718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +223,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: 0a8f1f51fc6bc034d98d7fa5adcdce01, type: 2}
   restoreDefaultMatTime: 0.1
+--- !u!114 &928486338139830617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261079803408168236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee73eddacc482846979385d9a860e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 2053897281272352272, guid: 87ed45f7065175940bb73d02e3db1db4, type: 3}
 --- !u!1 &5997780655208171603
 GameObject:
   m_ObjectHideFlags: 0

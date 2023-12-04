@@ -10,17 +10,16 @@ public class EnemyPathfinding : MonoBehaviour
     private Vector2 moveDir;
     private Knockback knockback;
 
-
     private void Awake() {
         knockback = GetComponent<Knockback>();
         rb = GetComponent<Rigidbody2D>();
     }
 
 
-    private void FixedUpdate() {
+    private void Update() {
         if (knockback.GettingKnockedBack) { return; }
 
-        rb.MovePosition(rb.position + moveDir * (moveSpeed * Time.fixedDeltaTime));
+        transform.position = Vector2.MoveTowards(transform.position, PlayerController.Instance.transform.position,  moveSpeed * Time.fixedDeltaTime);
     }
 
 
