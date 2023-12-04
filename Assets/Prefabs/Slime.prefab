@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba152e0377e7434abd663235b673975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 1
   deathVFXPrefab: {fileID: 3884831810284188939, guid: 5e4dc578e748d904ba72ecc966a6dc0a, type: 3}
   knockBackThrust: 15
 --- !u!114 &3716827411637091718
@@ -236,6 +236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 2053897281272352272, guid: 87ed45f7065175940bb73d02e3db1db4, type: 3}
+  healthPrefab: {fileID: 3079486980062521127, guid: 49453f5589849894eb7d9e812aa788fb, type: 3}
+  coinDropChance: 0.3
+  heartDropChance: 0.1
 --- !u!1 &5997780655208171603
 GameObject:
   m_ObjectHideFlags: 0
