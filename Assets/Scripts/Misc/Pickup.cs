@@ -58,6 +58,7 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            DetectPickupType();
             Destroy(gameObject);
         }
     }
@@ -89,10 +90,11 @@ public class Pickup : MonoBehaviour
         switch (pickUpType)
         {
             case PickUpType.GoldCoin:
-
+                Debug.Log("gold");
                 break;
             case PickUpType.Health:
-            
+                PlayerHealth.Instance.HealPlayer();
+                Debug.Log("health");
                 break;
         }
     }
