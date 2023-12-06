@@ -28,11 +28,17 @@ public class ActiveInventory : MonoBehaviour
         numValue--;
         activeSlotIndexNum = numValue;
 
-        foreach (Transform invertorySlot in this.transform)
+        foreach (Transform invertorySlot in transform)
         {
             invertorySlot.GetChild(0).gameObject.SetActive(false);
         }
 
-        this.transform.GetChild(numValue).GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(numValue).GetChild(0).gameObject.SetActive(true);
+
+        ChangeActiveWeapon();
+    }
+
+    private void ChangeActiveWeapon(){
+
     }
 }
