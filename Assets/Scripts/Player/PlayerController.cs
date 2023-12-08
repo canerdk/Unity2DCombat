@@ -9,6 +9,7 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float dashSpeed = 4f;
     [SerializeField] private TrailRenderer mytrailRenderer;
+    [SerializeField] private Transform weaponCollider;
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -24,7 +25,7 @@ public class PlayerController : Singleton<PlayerController>
     protected override void Awake()
     {
         base.Awake();
-        
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
@@ -54,6 +55,11 @@ public class PlayerController : Singleton<PlayerController>
         Move();
     }
 
+    public Transform GetWeaponCollider()
+    {
+        return weaponCollider;
+    }
+
     private void PlayerInput()
     {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
@@ -63,8 +69,8 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Move()
     {
-        if(knockback.GettingKnockedBack) return;
-        
+        if (knockback.GettingKnockedBack) return;
+
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
 

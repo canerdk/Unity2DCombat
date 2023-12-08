@@ -9674,6 +9674,7 @@ MonoBehaviour:
   moveSpeed: 4
   dashSpeed: 4
   mytrailRenderer: {fileID: 1620395695}
+  weaponCollider: {fileID: 1347365210}
 --- !u!95 &1298423837
 Animator:
   serializedVersion: 5
@@ -18647,7 +18648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161c0f8e56b1b924baefe3a5fc769305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentActiveWeapon: {fileID: 0}
 --- !u!1 &1752292579
 GameObject:
   m_ObjectHideFlags: 0
